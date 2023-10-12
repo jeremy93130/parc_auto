@@ -1,8 +1,8 @@
-{% extends 'base.html.twig' %} {% block title %}Hello Voiture{% endblock %} {%
-block body %}
-<h2><a href="{{url('list_location', date:location.datelocation)}}">Liste des voitures en location</a></h2>
+{% extends "base.html.twig" %} {% block title %}Detail voiture{% endblock %}
+
+{% block body %}
+
 <div class="card" style="width: 18rem">
-  {% for voiture in voitures %}
   <img src="{{ voiture.image }}" class="card-img-top" alt="..." />
   <div class="card-body">
     <h5 class="card-title">{{ voiture.nom }}</h5>
@@ -16,7 +16,8 @@ block body %}
     </li>
     <a href="{{ url('details', { id: voiture.id }) }}">Plus de Détails </a>
   </ul>
-
-  {% endfor %}
 </div>
+
+
+
 {% endblock %}
