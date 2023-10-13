@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %} {% block title %}Hello Voiture{% endblock %} {%
 block body %}
-<h2><a href="{{url('list_location', date:location.datelocation)}}">Liste des voitures en location</a></h2>
+<h2><a href="{{ url('list_location')}}">Liste des voitures en location</a></h2>
 <div class="card" style="width: 18rem">
   {% for voiture in voitures %}
   <img src="{{ voiture.image }}" class="card-img-top" alt="..." />

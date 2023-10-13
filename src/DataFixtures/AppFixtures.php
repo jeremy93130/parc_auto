@@ -51,7 +51,7 @@ class AppFixtures extends Fixture
             $locateur->setPrenom($faker->firstName());
             $locateur->setAge($faker->numberBetween($min = 18, $max = 76));
             $locateur->setAdresse($faker->address());
-            $locateur->setVoiture($voitures[$faker->numberBetween(0, 14)]);
+            $locateur->setVoiture($voitures[$faker->numberBetween(0, 50)]);
             $manager->persist($locateur);
             $locateurs[] = $locateur;
         }

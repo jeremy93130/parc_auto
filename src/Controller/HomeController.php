@@ -38,6 +38,7 @@ class HomeController extends AbstractController
     public function listLocation(LocationRepository $location): Response{
 
         $locations = $location->findLocationNotNull();
+
         return $this->render('home/list_location.html.twig', [
             'lists' => $locations
         ]);
